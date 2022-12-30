@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/contact_us.css">
     </head>
     <body>
         <!--Header-->
@@ -17,7 +17,28 @@
         </div>
 
         <!--Body-->
-        
+
+        <form>
+            <label>
+                <input name="name" id="name" type="text" required />
+                <div class="label-text">Full Name</div>
+            </label>
+            <label>
+                <input type="email" name="email" id="email" required />
+                <div class="label-text">Email</div>
+            </label>
+            <label>
+                <input type="tel" name="phone" id="phone" required />
+                <div class="label-text">Phone Number</div>
+            </label>
+            <label>
+                <input type="text" name="enquiry" id="enquiry" required />
+                <div class="label-text">Your enquiry</div>
+            </label>
+            <div class="button">
+                <button type="submit" value="Submit">Submit</button>
+            </div>
+        </form>
 
     </body>
 </html>

@@ -9,6 +9,9 @@
 
 /*Header*/
 /* Style the header with a grey background and some padding */
+img{
+  border-radius: 100%;
+}
 .header {
     overflow: hidden;
     padding: 20px 10px;
@@ -63,7 +66,7 @@
 
 /*Body*/
 body{
-    background-image: url('../images/bg-1.jpg');
+    background-image: url('../images/bg-5.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -124,4 +127,5 @@ form button{
     width: 190px;
     height: 55px;
   }
+
 
