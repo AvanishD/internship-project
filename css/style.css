@@ -20,7 +20,7 @@ img{
   /* Style the header links */
   .header a {
     float: left;
-    color: black;
+    color: white;
     text-align: center;
     padding: 12px;
     text-decoration: none;
@@ -67,6 +67,7 @@ img{
 /*Body*/
 body{
     background-image: url('../images/bg-5.jpg');
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }

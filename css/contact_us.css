@@ -6,6 +6,9 @@
 }
 /*Header*/
 /* Style the header with a grey background and some padding */
+img{
+    border-radius: 100%;
+}
 .header {
     overflow: hidden;
     padding: 20px 10px;
@@ -14,7 +17,7 @@
   /* Style the header links */
   .header a {
     float: left;
-    color: black;
+    color: white;
     text-align: center;
     padding: 12px;
     text-decoration: none;
@@ -58,7 +61,8 @@
     }
   }
 body{
-    background-image: url('../images/bg-4.jpg');
+    background-image: url('../images/bg-3.jpg');
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
