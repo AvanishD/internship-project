@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Admin Dashboard</title>
+        <link rel="stylesheet" href="../admin/admin.css">
+    </head>
+    <body>
+        <div class="header">
+            <h3>Admin - Night Spirit</h3>
+            <a href="../html/home.html">Return to user portal</a>
+        </div>
+
+        <div class="tab">
+          <button class="tablinks" onclick="openTab(event, 'Concert')" id="defaultOpen">Add/Delete Concerts</button>
+          <button class="tablinks" onclick="openTab(event, 'Enquiry')">Display enquiries</button>
+          <button class="tablinks" onclick="openTab(event, 'Gallery')">Edit the photos of Gallery</button>
+        </div>
+        
+        <div id="Concert" class="tabcontent">
+          <form action="">
+            <label for="name">Concert Name</label>
+            <input type="text" name="concertname" id="concertname">
+            
+            <br>
+            <label for="name">Concert Date</label>
+            <input type="date" name="concertdate" id="concertdate">
+            
+            <br>
+            <br>
+            <label for="name">Concert Artist</label>
+            <input type="text" name="concertartist" id="concertartist">
+
+            <br>
+            <br>
+            <label for="name">Concert Venue</label>
+            <input type="text" name="concertvenue" id="concertvenue">
+            
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+        
+        <div id="Enquiry" class="tabcontent">
+          <h3>Paris</h3>
+          <p>Paris is the capital of France.</p> 
+        </div>
+        
+        <div id="Gallery" class="tabcontent">
+          <h3>Tokyo</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+        
+        <script>
+        function openTab(evt, tabName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(tabName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+           
+        </body>
+</html>
