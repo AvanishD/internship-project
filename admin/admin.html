@@ -10,12 +10,13 @@
         </div>
 
         <div class="tab">
-          <button class="tablinks" onclick="openTab(event, 'Concert')" id="defaultOpen">Add/Delete Concerts</button>
+          <button class="tablinks" onclick="openTab(event, 'addConcert')" id="defaultOpen">Add Concerts</button>
+          <button class="tablinks" onclick="openTab(event, 'delConcert')">Delete Concerts</button>
           <button class="tablinks" onclick="openTab(event, 'Enquiry')">Display enquiries</button>
           <button class="tablinks" onclick="openTab(event, 'Gallery')">Edit the photos of Gallery</button>
         </div>
         
-        <div id="Concert" class="tabcontent">
+        <div id="addConcert" class="tabcontent">
           <form action="">
             <label for="name">Concert Name</label>
             <input type="text" name="concertname" id="concertname">
@@ -38,14 +39,21 @@
           </form>
         </div>
         
+        <div id="delConcert" class="tabcontent">
+
+        </div>
+        
         <div id="Enquiry" class="tabcontent">
           <h3>Paris</h3>
           <p>Paris is the capital of France.</p> 
         </div>
-        
+
         <div id="Gallery" class="tabcontent">
-          <h3>Tokyo</h3>
-          <p>Tokyo is the capital of Japan.</p>
+          <h3>Add images here</h3>
+          <form action="#">
+            <input type="file" name="image" id="myFile">
+            <input type="submit">
+          </form>
         </div>
         
         <script>
