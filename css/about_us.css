@@ -179,6 +179,7 @@ body {
     background-color: #555;
   } */
   
+  
   @media screen and (max-width: 650px) {
     .column {
       width: 100%;
