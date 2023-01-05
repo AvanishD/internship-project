@@ -64,6 +64,322 @@ img{
     }
   }
 
+/*body*/
+
+  @-webkit-keyframes page1Movement {
+    0% {top:0;}
+    40% {top:-120px;}
+     60% {top:-120px;}
+     61% {top:-120px;z-index: 3;}
+     80% {top:-120px;}
+     100% {top:-120px;}
+ }
+ 
+ @keyframes page1Movement {
+    0% {top:0;}
+    40% {top:-120px;}
+     60% {top:-120px;}
+     61% {top:-120px;z-index: 3;}
+     80% {top:-120px;}
+     100% {top:-120px;}
+ }
+ 
+ 
+ .file {
+   width:120px;
+   height:110px;
+   background:#1E824C;
+   position: relative;
+   left:100px;
+   top:200px;
+   border-radius: 6px;	
+ }
+ 
+ .file::before {
+   content:"";
+   position: absolute;
+   width:120px;
+   height:100px;
+   background:#16A085;
+   position: absolute;
+   left:0px;
+   top:10px;
+   border-radius: 6px;
+   z-index: 5;
+   box-shadow: 3px -3px 5px rgba(0,0,0,0.5);
+ }
+ 
+ .file::after {
+   content:"";
+   position: relative;
+   width:60px;
+   height:20px;
+   background: #1E824C;
+   position: relative;
+   top:-8px;
+   left:0;
+   z-index:1;
+   
+ }
+ 
+ .page {
+   width:90px;
+   height:100px;
+   background:#D2D7D3;
+   position: absolute;
+   z-index: 2;
+   left:15px;
+   top:0px;
+   border-radius: 5px;
+   box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+   font-family: helvetica;
+   text-align: center;
+   color:#913D88;
+ }
+ 
+ .page1 {
+   z-index:3;
+ }
+ 
+ h2 {
+   color:#ECECEC;
+   text-align:center;
+   margin-top:0;
+ }
+ 
+ .file:hover .page1{
+   -webkit-animation: page1Movement 1.5s linear infinite alternate;
+   animation: page1Movement 1.5s linear infinite alternate;
+ }
+ 
+ 
+ 
+ 
+ .file1 {
+   width:120px;
+   height:110px;
+   background:#1E824C;
+   position: relative;
+   left:130px;        /* position  1 */
+   top:90px; 
+   border-radius: 6px;	
+     margin-left: 150px;
+     margin-top: 0;
+ }
+ 
+ .file1::before {
+   content:"";
+   position: absolute;
+   width:120px;
+   height:100px;
+   background:#16A085;
+   position: absolute;
+   left:0px;
+   top:10px;
+   border-radius: 6px;
+   z-index: 5;
+   box-shadow: 3px -3px 5px rgba(0,0,0,0.5);
+ }
+ 
+ .file1::after {
+   content:"";
+   position: relative;
+   width:60px;
+   height:20px;
+   background: #1E824C;
+   position: relative;
+   top:-8px;
+   left:0;
+   z-index:1;
+   
+ }
+ 
+ .file1:hover .page1{
+   -webkit-animation: page1Movement 1.5s linear infinite alternate;
+   animation: page1Movement 1.5s linear infinite alternate;
+ }
+ 
+ 
+ .file2 {
+   width:120px;
+   height:110px;
+   background:#1E824C;
+   position: relative;
+   left: 310px;        /* position 2 */
+   top:-20px; 
+   border-radius: 6px;	
+     margin-left: 150px;
+     margin-top: 0;
+ }
+ 
+ .file2::before {
+   content:"";
+   position: absolute;
+   width:120px;
+   height:100px;
+   background:#16A085;
+   position: absolute;
+   left:0px;
+   top:10px;
+   border-radius: 6px;
+   z-index: 5;
+   box-shadow: 3px -3px 5px rgba(0,0,0,0.5);
+ }
+ 
+ .file2::after {
+   content:"";
+   position: relative;
+   width:60px;
+   height:20px;
+   background: #1E824C;
+   position: relative;
+   top:-8px;
+   left:0;
+   z-index:1;
+   
+ }
+ 
+ .file2:hover .page1{
+   -webkit-animation: page1Movement 1.5s linear infinite alternate;
+   animation: page1Movement 1.5s linear infinite alternate;
+ }
+ 
+ 
+ .file3 {
+   width:120px;
+   height:110px;
+   background:#1E824C;
+   position: relative;
+   left: 500px;        /* position  3 */
+   top:-130px; 
+   border-radius: 6px;	
+     margin-left: 150px;
+     margin-top: 0;
+ }
+ 
+ .file3::before {
+   content:"";
+   position: absolute;
+   width:120px;
+   height:100px;
+   background:#16A085;
+   position: absolute;
+   left:0px;
+   top:10px;
+   border-radius: 6px;
+   z-index: 5;
+   box-shadow: 3px -3px 5px rgba(0,0,0,0.5);
+ }
+ 
+ .file3::after {
+   content:"";
+   position: relative;
+   width:60px;
+   height:20px;
+   background: #1E824C;
+   position: relative;
+   top:-8px;
+   left:0;
+   z-index:1;
+   
+ }
+ 
+ .file3:hover .page1{
+   -webkit-animation: page1Movement 1.5s linear infinite alternate;
+   animation: page1Movement 1.5s linear infinite alternate;
+ }
+ 
+ 
+ .file4 {
+   width:120px;
+   height:110px;
+   background:#1E824C;
+   position: relative;
+   left:690px;        /* position 4 */
+   top:-240px; 
+   border-radius: 6px;	
+     margin-left: 150px;
+     margin-top: 0;
+ }
+ 
+ .file4::before {
+   content:"";
+   position: absolute;
+   width:120px;
+   height:100px;
+   background:#16A085;
+   position: absolute;
+   left:0px;
+   top:10px;
+   border-radius: 6px;
+   z-index: 5;
+   box-shadow: 3px -3px 5px rgba(0,0,0,0.5);
+ }
+ 
+ .file4::after {
+   content:"";
+   position: relative;
+   width:60px;
+   height:20px;
+   background: #1E824C;
+   position: relative;
+   top:-8px;
+   left:0;
+   z-index:1;
+   
+ }
+ 
+ .file4:hover .page1{
+   -webkit-animation: page1Movement 1.5s linear infinite alternate;
+   animation: page1Movement 1.5s linear infinite alternate;
+ }
+ 
+ 
+ .file5 {
+   width:120px;
+   height:110px;
+   background:#1E824C;
+   position: relative;
+   left:880px;        /* position 5 */
+   top:-350px; 
+   border-radius: 6px;	
+     margin-left: 150px;
+     margin-top: 0;
+ }
+ 
+ .file5::before {
+   content:"";
+   position: absolute;
+   width:120px;
+   height:100px;
+   background:#16A085;
+   position: absolute;
+   left:0px;
+   top:10px;
+   border-radius: 6px;
+   z-index: 5;
+   box-shadow: 3px -3px 5px rgba(0,0,0,0.5);
+ }
+ 
+ .file5::after {
+   content:"";
+   position: relative;
+   width:60px;
+   height:20px;
+   background: #1E824C;
+   position: relative;
+   top:-8px;
+   left:0;
+   z-index:1;
+   
+ }
+ 
+ .file5:hover .page1{
+   -webkit-animation: page1Movement 1.5s linear infinite alternate;
+   animation: page1Movement 1.5s linear infinite alternate;
+ }
+ 
+
   footer{
     display: block;
     padding: 3px;
@@ -83,4 +399,24 @@ img{
     margin-right: 16px;
            
   }
+  
+footer{
+  display: block;
+  padding: 3px;
+  overflow: none;
+  float: left;
+  width: 100%;
+  height: 30px;
+  font-size:20px;
+  font-weight:bold;
+  background-color: #555; 
+  opacity: 0.4;
+  text-align: center;
+  position: fixed;
+  bottom: 1;
+  /* background: transparent; */
+  margin-top: 16px;
+  margin-right: 16px;
+         
+}
   
