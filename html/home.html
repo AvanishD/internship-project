@@ -1,11 +1,14 @@
-<html>
+ <html>
     <head>
         <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <title>Home</title>
     </head>
-    <body>
+    <body> 
         <!--Header-->
-        <div class="header">
+       <div class="header">
             <img src="../images/bg-2.png" alt="Logo" width="150px", height="90px">
             <div class="header-right">
                 <a href="../html/home.html">Home</a>
@@ -20,16 +23,67 @@
         
 
         <!--Body-->
-        <div class="container">
-            <input type="date" id="dateofbirth" placeholder="Date">
-            <form>
-                <input type="text" placeholder="Search for artist">
-                <button type="submit">Search</button>
-            </form>
-        </div>
-        <footer>
-            <p style="color: rgb(253, 253, 253);font-family: 'Courier New';"> &copy; Night Spirit 2023</p>
-          </footer>
-          
+    <div class="form-group pull-right">
+        <input type="text" class="search form-control" placeholder="Search for artist, venue" style="width: 600px; margin-bottom: 20px;">
+    </div>
+    <span class="counter pull-right"></span>
+    <table class="table table-hover table-bordered results" style="background-color: white;">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th class="col-md-5 col-xs-5">Artist Name</th>
+          <th class="col-md-4 col-xs-4">Venue</th>
+          <th class="col-md-3 col-xs-3">Date</th>
+          <th class="col-md-2 col-xs-2">Book Now</th>
+        </tr>
+        <tr class="warning no-result">
+          <td colspan="4"><i class="fa fa-warning"></i> No result</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Taylor Swift</td>
+          <td>Mumbai</td>
+          <td>24-2-2024</td>
+          <td><a href="../reg_forms/form_taylor.html"><input type="submit" value="Book Now"></a></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Ed Sheeran</td>
+          <td>Paris</td>
+          <td>06-03-2024</td>
+          <td><a href="../reg_forms/form_ed.html"><input type="submit" value="Book Now"></a></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>AP Dhillon</td>
+          <td>Los Angeles</td>
+          <td>05-04-2024</td>
+          <td><a href="../reg_forms/form_ap.html"><input type="submit" value="Book Now"></a></td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Kanye West</td>
+          <td>Las Vegas</td>
+          <td>01-05-2024</td>
+          <td><a href="../reg_forms/form_kanye.html"><input type="submit" value="Book Now"></a></td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <td>Justin Bieber</td>
+            <td>Delhi</td>
+            <td>09-05-2024</td>
+            <td><a href="../reg_forms/form_justin.html"><input type="submit" value="Book Now"></a></td>
+        </tr>
+      </tbody>
+    </table>
+    
+
     </body>
-</html>
+    <script src="home.js"></script>
+    <footer>
+        <p style="color: rgb(253, 253, 253);font-family: 'Courier New';"> &copy; Night Spirit 2023</p>
+    </footer>
+</html> 
+

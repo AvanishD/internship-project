@@ -19,20 +19,18 @@
     }
 
     
-    //if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try{
-        $fullname = ($_POST["name"]);
-        $email = ($_POST["email"]);
-        $phone = ($_POST["phone"]);
-        $enquiry = ($_POST["enquiry"]);
-        $stmt = "INSERT INTO contact VALUES ('$fullname', '$email', $phone, '$enquiry')";
-	    $conn->exec($stmt);
-
-        header("location: home.html");
-    } catch (PDOException $e){
-        echo $stmt . "<br>" . $e->getMessage();
+        $fullname = $_POST["field1"];
+        $phoneno = $_POST["field3"];
+        $email = $_POST["field2"];
+        $age = $_POST["field5"];
+        $consertname = $_POST["field4"];
+        $stmt = "INSERT INTO register VALUES ('$fullname',$phoneno,'$email',$age,'$consertname')";
+        $conn -> exec($stmt);
+        header("location : home.html");
     }
+    catch( PDOException $e){
+        echo $stmt . "<br>" . $e->getMessage();
+    }   
     $conn = null;
-    //}
-    
 ?>

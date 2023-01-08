@@ -4,12 +4,12 @@ $conn = "";
 
 try {
 	$servername = "localhost";
-	$dbname = "internship";                         //add database ka name idhar jo rakha ho
+	$dbname = "internship";                         
 	$username = "root";
 	$password = "";
 
 	$conn = new PDO(
-		"mysql:host=$servername; dbname=internship",  //and idhar as well and password b enter karna hai 
+		"mysql:host=$servername; dbname=internship",   
 		$username, $password
 	);
 	
