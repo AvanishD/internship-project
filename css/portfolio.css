@@ -1,8 +1,8 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
 /*Home Page styling*/
@@ -10,114 +10,244 @@
 /*Header*/
 /* Style the header with a grey background and some padding */
 img{
-  border-radius: 100%;
+border-radius: 100%;
 }
 .header {
-    overflow: hidden;
-    padding: 20px 10px;
-  }
-  
-  /* Style the header links */
+  overflow: hidden;
+  padding: 20px 10px;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 23px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  size: 100px;
+  border-radius: 25%;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: rgb(90, 25, 27);
+  color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
   .header a {
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 23px;
-    line-height: 25px;
-    border-radius: 4px;
+    float: none;
+    display: block;
+    text-align: left;
   }
-  
-  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-  .header a.logo {
-    size: 100px;
-    border-radius: 25%;
-  }
-  
-  /* Change the background color on mouse-over */
-  .header a:hover {
-    background-color: rgb(90, 25, 27);
-    color: black;
-  }
-  
-  /* Style the active/current link*/
-  .header a.active {
-    background-color: dodgerblue;
-    color: white;
-  }
-  
-  /* Float the link section to the right */
   .header-right {
-    float: right;
+    float: none;
   }
-  
-  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-  @media screen and (max-width: 500px) {
-    .header a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    .header-right {
-      float: none;
-    }
-  }
+}
 
 body{
-    background-image: url('../images/bg-1.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-image: url('../images/bg-1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 footer{
-  display: block;
-  padding: 3px;
-  overflow: none;
-  float: left;
-  width: 100%;
-  height: 30px;
-  font-size:20px;
-  font-weight:bold;
-  background-color: #555; 
-  opacity: 0.4;
-  text-align: center;
-  position: fixed;
-  bottom: 1;
-  /* background: transparent; */
-  margin-top: 16px;
-  margin-right: 16px;
-         
+display: block;
+padding: 3px;
+overflow: none;
+float: left;
+width: 100%;
+height: 30px;
+font-size:20px;
+font-weight:bold;
+background-color: #555; 
+opacity: 0.4;
+text-align: center;
+position: fixed;
+bottom: 1;
+/* background: transparent; */
+margin-top: 16px;
+margin-right: 16px;
+       
+}
+
+* {
+box-sizing: border-box;
+}
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+position: relative;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+content: '';
+position: absolute;
+width: 6px;
+background-color: gray;
+top: 0;
+bottom: 0;
+left: 50%;
+margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+padding: 10px 40px;
+position: relative;
+background-color: inherit;
+width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+content: '';
+position: absolute;
+width: 25px;
+height: 25px;
+right: -17px;
+background-color: white;
+border: 4px solid #FF9F55;
+top: 15px;
+border-radius: 50%;
+z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+left: 0;
+}
+
+/* Place the container to the right */
+.right {
+left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+content: " ";
+height: 0;
+position: absolute;
+top: 22px;
+width: 0;
+z-index: 1;
+right: 30px;
+border: medium solid white;
+border-width: 10px 0 10px 10px;
+border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+content: " ";
+height: 0;
+position: absolute;
+top: 22px;
+width: 0;
+z-index: 1;
+left: 30px;
+border: medium solid white;
+border-width: 10px 10px 10px 0;
+border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+left: -16px;
+}
+
+/* The actual content */
+.content {
+padding: 20px 30px;
+background-color: rgb(255, 255, 255);
+position: relative;
+border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+.timeline::after {
+left: 31px;
+}
+
+/* Full-width containers */
+.container {
+width: 100%;
+padding-left: 70px;
+padding-right: 25px;
+}
+
+/* Make sure that all arrows are pointing leftwards */
+.container::before {
+left: 60px;
+border: medium solid rgb(55, 55, 55);
+border-width: 10px 10px 10px 0;
+border-color: transparent rgb(78, 76, 76) transparent transparent;
+}
+
+/* Make sure all circles are at the same spot */
+.left::after, .right::after {
+left: 15px;
+}
+
+/* Make all right containers behave like the left ones */
+.right {
+left: 0%;
+}
 }
 
 
 /*.mytabs{
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 25px;
+display: flex;
+flex-wrap: wrap;
+max-width: 600px;
+margin: 50px auto;
+padding: 25px;
 }
 
 .mytabs input[type='radio']{
-  display: none;
+display: none;
 }
 
 .mytabs label{
-  padding: 25px;
-  background: #e2e2e2;
-  font-weight: bold;
+padding: 25px;
+background: #e2e2e2;
+font-weight: bold;
 }
 
 .mytabs .tab{
-  width: 100%;
-  padding: 20px;
-  background-color: #fff;
-  order: 1;
-  display: none;
+width: 100%;
+padding: 20px;
+background-color: #fff;
+order: 1;
+display: none;
 }
 
 .mytabs input[type='radio']:checked + label + .tab{
-  display: block;
+display: block;
 }
 
