@@ -31,7 +31,7 @@
         $email = test_input($_POST["emai;"]);
         $age = test_input($_POST["age"]);
         $consertname = test_input($_POST["cname"]);
-        $stmt = "INSERT INTO booking VALUES ('$fullname',$phoneno,'$email',$age,'$consertname')";
+        $stmt = "INSERT INTO register ('fullname', 'phoneno', 'email', 'age', 'consertname') VALUES ('$fullname',$phoneno,'$email',$age,'$consertname')";
         $conn -> exec($stmt);
         header("location : home.html");
     }
