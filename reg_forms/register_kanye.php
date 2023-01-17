@@ -30,8 +30,8 @@
         $phoneno = test_input($_POST["field3"]);
         $email = test_input($_POST["field2"]);
         $age = test_input($_POST["field5"]);
-        $consertname = test_input($_POST["field4"]);
-        $stmt = "INSERT INTO register ('fullname', 'phoneno', 'email', 'age', 'consertname' ) VALUES ('$fullname',$phoneno,'$email',$age,'$consertname')";
+        $concertname = test_input($_POST["field4"]);
+        $stmt = "INSERT INTO register ('fullname', 'phoneno', 'email', 'age', 'concertname' ) VALUES ('$fullname',$phoneno,'$email',$age,'$concertname')";
         $conn -> exec($stmt);
         header("location : home.html");
     }
