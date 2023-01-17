@@ -25,7 +25,7 @@
         $email = ($_POST["email"]);
         $phone = ($_POST["phone"]);
         $enquiry = ($_POST["enquiry"]);
-        $stmt = "INSERT INTO contact VALUES ('$fullname', '$email', $phone, '$enquiry')";
+        $stmt = "INSERT INTO contact ('fullname', 'email', 'phone', 'enquiry')  VALUES ('$fullname', '$email', $phone, '$enquiry')";
 	    $conn->exec($stmt);
 
         header("location: home.html");
