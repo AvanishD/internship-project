@@ -5,7 +5,7 @@
 $user = 'root';
 $password = '';
 
-// Database name is geeksforgeeks
+
 $database = 'internship';
 
 // Server is localhost with
